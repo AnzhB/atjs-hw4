@@ -104,7 +104,7 @@ describe('check table sort', function () {
         });
         const items = await Promise.all(sortedItemsList);
         const itemsToNum = items.map((item) => {
-        return +item;
+        return + item;
         });
         const properlySortedArr = Array.from(itemsToNum).sort(compareDESC);
         await expect(itemsToNum).toEqual(properlySortedArr);
